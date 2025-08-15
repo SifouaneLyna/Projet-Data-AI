@@ -69,8 +69,8 @@ def index():
 
                 y_pred_log = model.predict(input_scaled)[0]
                 predicted_price = np.expm1(y_pred_log)
-                min_price = max(0, np.expm1(y_pred_log - 0.2256))
-                max_price = np.expm1(y_pred_log + 0.2256)
+                min_price = max(0, np.expm1(y_pred_log - 0.2255))
+                max_price = np.expm1(y_pred_log + 0.2255)
 
                 # affichage du resultat
                 property_display = f"Appartement ({property_type})" if main_property_type == 'Apartment' else main_property_type
